@@ -6,7 +6,6 @@ with open("data") as f:
 
     data = f.readlines()
 
-    IntervalDict = NewType("IntervalDict", Dict[int, List[Tuple[int,int]]])
     
 
     def sortSeries(data:List[str]) -> Tuple[List[int], List[str]]:
@@ -29,7 +28,7 @@ with open("data") as f:
                     intermed[guard] = []
             else:
                 intermed[guard].append(minutes[i])
-                
+
         res:Dict[int, List[Tuple[int,int]]]=  {}
         for key in intermed:
             v = [] 
